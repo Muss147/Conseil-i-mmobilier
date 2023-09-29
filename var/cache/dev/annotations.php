@@ -62,6 +62,20 @@ return [[
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%23addLink' => 1,
 'Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 0,
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 1,
+'App%5CController%5CFrontController' => 0,
+'[C]App%5CController%5CFrontController' => 1,
+'App%5CController%5CFrontController%23__contruct' => 0,
+'[C]App%5CController%5CFrontController%23__contruct' => 1,
+'App%5CController%5CFrontController%23header' => 0,
+'[C]App%5CController%5CFrontController%23header' => 1,
+'App%5CController%5CFrontController%23home' => 2,
+'[C]App%5CController%5CFrontController%23home' => 1,
+'App%5CController%5CFrontController%23about' => 3,
+'[C]App%5CController%5CFrontController%23about' => 1,
+'App%5CController%5CFrontController%23footer' => 0,
+'[C]App%5CController%5CFrontController%23footer' => 1,
+'App%5CController%5CFrontController%24doctrine' => 0,
+'[C]App%5CController%5CFrontController%24doctrine' => 1,
 'Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController' => 0,
 '[C]Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController' => 1,
 'Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%23__construct' => 0,
@@ -612,6 +626,50 @@ return [[
 ], [
 
 0 => [],
-1 => 1695839018,
+1 => 1695855373,
+2 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/',
+                ],
+                'name' => [
+                    'app_home',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+3 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    'a-propos',
+                ],
+                'name' => [
+                    'app_about',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
 
 ]];

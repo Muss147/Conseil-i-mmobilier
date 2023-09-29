@@ -23,7 +23,7 @@ class NotifierConfig
     private $adminRecipients;
     
     /**
-     * @default false
+     * @default true
      * @param ParamConfigurator|bool $value
      * @return $this
      */
