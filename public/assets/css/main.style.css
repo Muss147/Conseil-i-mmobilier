@@ -135,6 +135,19 @@ img {
     color: var(--first-color);
 }
 
+.text-primary {
+    color: var(--first-color) !important;
+}
+.text-secondary {
+    color: var(--seconde-color) !important;
+}
+.text-justify {
+    text-align: justify !important;
+}
+.text-link:hover {
+    color: var(--seconde-color);
+}
+
 .fs-biggest {
     font-size: var(--biggest-font-size) !important;
 }
@@ -158,6 +171,17 @@ img {
     padding-top: 5rem !important;
     padding-bottom: 5rem !important;
 }
+.pt-6 {
+    padding-top: 5rem !important;
+}
+.ps-6 {
+    padding-left: 5rem !important;
+}
+
+.mt-6 {
+    margin-top: 5rem !important;
+}
+
 /*=============== BUTTONS ===============*/
 .btn {
     transition: .4s;
@@ -180,6 +204,8 @@ img {
 .btn-link {
     font-weight: var(--font-bold);
     text-decoration: initial;
+    padding: 0 !important;
+    color: inherit;
 }
 
 .btn-link:hover {
@@ -268,13 +294,15 @@ header.scroll nav {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .w-md-50 {
-        width: 50% !important;
-    }
     .w-md-100 {
         width: 100% !important;
     }
-
+    .w-md-75 {
+        width: 75% !important;
+    }
+    .w-md-50 {
+        width: 50% !important;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -282,11 +310,21 @@ header.scroll nav {
     .nav__close, .nav__button {
         display: none;
     }
+    .w-lg-75 {
+        width: 75% !important;
+    }
     .w-lg-50 {
         width: 50% !important;
     }
     .w-lg-100 {
         width: 100% !important;
+    }
+    .py-lg-6 {    
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+    }
+    .ps-lg-6 {
+        padding-left: 5rem !important;
     }
 }
 

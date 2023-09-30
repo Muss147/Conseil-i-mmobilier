@@ -40,6 +40,14 @@ class FrontController extends AbstractController
         return $this->render('front/about.html.twig');
     }
 
+    /**
+     * @Route("services", name="app_services")
+     */
+    public function services(): Response
+    {
+        return $this->render('front/services.html.twig');
+    }
+
     public function footer()
     {
         return $this->render('front/_footer.html.twig');

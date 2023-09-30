@@ -50,9 +50,18 @@ class __TwigTemplate_156206f05a5c9ed41c7ea486617dd54e extends Template
         </div>
         <div class=\"nav__menu flex-fill\">
             <ul class=\"list d-flex gap-5 align-items-center justify-content-center\">
-                <li><a href=\"\" class=\"nav__link\">Accueil</a></li>
-                <li><a href=\"\" class=\"nav__link\">À propos</a></li>
-                <li><a href=\"\" class=\"nav__link\">Services</a></li>
+                <li><a href=\"";
+        // line 8
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
+        echo "\" class=\"nav__link\">Accueil</a></li>
+                <li><a href=\"";
+        // line 9
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_about");
+        echo "\" class=\"nav__link\">À propos</a></li>
+                <li><a href=\"";
+        // line 10
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_services");
+        echo "\" class=\"nav__link\">Services</a></li>
                 <li><a href=\"\" class=\"nav__link\">Contact</a></li>
             </ul>
             <!-- Close button -->
@@ -61,9 +70,9 @@ class __TwigTemplate_156206f05a5c9ed41c7ea486617dd54e extends Template
             </div>
         </div>
         <div class=\"nav__alt\">
-            <a href=\"\" class=\"nav__link\">
+            <a href=\"tel:0033615202035\" class=\"nav__link\">
                 <i class=\"ri-phone-fill align-middle\"></i>
-                +225 07 123 456 78
+                +33 6 15 20 20 35
             </a>
         </div>
 
@@ -95,7 +104,7 @@ class __TwigTemplate_156206f05a5c9ed41c7ea486617dd54e extends Template
 
     public function getDebugInfo()
     {
-        return array (  48 => 4,  43 => 1,);
+        return array (  63 => 10,  59 => 9,  55 => 8,  48 => 4,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -107,9 +116,9 @@ class __TwigTemplate_156206f05a5c9ed41c7ea486617dd54e extends Template
         </div>
         <div class=\"nav__menu flex-fill\">
             <ul class=\"list d-flex gap-5 align-items-center justify-content-center\">
-                <li><a href=\"\" class=\"nav__link\">Accueil</a></li>
-                <li><a href=\"\" class=\"nav__link\">À propos</a></li>
-                <li><a href=\"\" class=\"nav__link\">Services</a></li>
+                <li><a href=\"{{path('app_home')}}\" class=\"nav__link\">Accueil</a></li>
+                <li><a href=\"{{path('app_about')}}\" class=\"nav__link\">À propos</a></li>
+                <li><a href=\"{{path('app_services')}}\" class=\"nav__link\">Services</a></li>
                 <li><a href=\"\" class=\"nav__link\">Contact</a></li>
             </ul>
             <!-- Close button -->
@@ -118,9 +127,9 @@ class __TwigTemplate_156206f05a5c9ed41c7ea486617dd54e extends Template
             </div>
         </div>
         <div class=\"nav__alt\">
-            <a href=\"\" class=\"nav__link\">
+            <a href=\"tel:0033615202035\" class=\"nav__link\">
                 <i class=\"ri-phone-fill align-middle\"></i>
-                +225 07 123 456 78
+                +33 6 15 20 20 35
             </a>
         </div>
 
