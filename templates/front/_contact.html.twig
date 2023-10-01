@@ -1,0 +1,37 @@
+<section id="contact" class="container section">
+    <div class="row">
+        <div class="col-md-6 p-5">
+            <h2 class="section__title">{{contactTitle}}</h2>
+            <p>Vous avez un projet Immobilier en France ou en Côte d'Ivolre? Vous recherchez un Interlocuteur flable et efficace? N'hésitez pas à nous contacter afin de nous confier votre projet. Vous aussi découvrez nos solutions d'accompagnement sur mesure et concrétiser votre projet.</p>
+            
+            <form class="form row" action="" method="POST">
+                <div class="col-sm-6 mb-3">
+                    <label for="nom">Nom<sup>*</sup></label>
+                    <input type="text" id="nom" class="form-control" name="nom" placeholder="Nom" required>
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <label for="prenom">Prénom<sup>*</sup></label>
+                    <input type="text" id="prenom" class="form-control" name="prenom" placeholder="Prénom" required>
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <label for="email">Email<sup>*</sup></label>
+                    <input type="email" id="email" class="form-control" name="email" placeholder="Email" required>
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <label for="telephone">Téléphone</label>
+                    <input type="tel" id="telephone" class="form-control" name="telephone" placeholder="Téléphone">
+                </div>
+                <div class="col-12 mb-3">
+                    <label for="message">Message</label>
+                    <textarea rows="5" id="message" class="form-control" name="message" placeholder="Dites-nous tout..."></textarea>
+                </div>
+                <div class="col-12 d-grid">
+                    <button type="submit" class="btn btn-secondary btn-block">Envoyer le message</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6 p-3 p-sm-0">
+            <img alt="indira2" src="{{asset('assets/media/illustrations/indira2.jpeg')}}" class="w-100 h-100" style="max-height: 625px; object-fit: cover">
+        </div>
+    </div>
+</section>

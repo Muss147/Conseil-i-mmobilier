@@ -1,21 +1,24 @@
 <header id="header" class="fixed-top w-100">
     <nav class="container d-flex align-items-center justify-content-between">
         <div class="nav__logo">
-            <a href=""><img alt="Conseil I mmobilier" src="{{asset('assets/media/logos/conseil-immobilier.png')}}"></a>
+            <a href="{{path('app_home')}}">
+                <img alt="Conseil I mmobilier" src="{{asset('assets/media/logos/conseil-immobilier-white.png')}}" class="logo-white">
+                <img alt="Conseil I mmobilier" src="{{asset('assets/media/logos/conseil-immobilier-blue.png')}}" class="logo-blue d-none">
+            </a>
         </div>
-        <div class="nav__menu flex-fill">
-            <ul class="list d-flex gap-5 align-items-center justify-content-center">
-                <li><a href="{{path('app_home')}}" class="nav__link">Accueil</a></li>
+        <div id="nav__menu" class="nav__menu flex-fill">
+            <ul class="list d-flex flex-column flex-lg-row gap-5 align-items-center justify-content-center">
                 <li><a href="{{path('app_about')}}" class="nav__link">À propos</a></li>
                 <li><a href="{{path('app_services')}}" class="nav__link">Services</a></li>
-                <li><a href="" class="nav__link">Contact</a></li>
+                <li><a href="{{path('app_blog')}}" class="nav__link">Blog</a></li>
+                <li><a href="{{path('app_contact')}}" class="nav__link">Contact</a></li>
             </ul>
             <!-- Close button -->
             <div class="nav__close" id="nav-close">
                 <i class="ri-close-line"></i>
             </div>
         </div>
-        <div class="nav__alt">
+        <div class="d-none d-lg-block">
             <a href="tel:0033615202035" class="nav__link">
                 <i class="ri-phone-fill align-middle"></i>
                 +33 6 15 20 20 35

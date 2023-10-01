@@ -81,6 +81,9 @@ class __TwigTemplate_2019cdc17f1387250cb292a8f53c8f43 extends Template
         <!-- ============ Bootstrap CSS ============ -->
         <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\">
 
+        <!-- ============ Leaflet CSS ============ -->
+        <link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css\" integrity=\"sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=\" crossorigin=\"\" />
+
         <!-- ============ REMIXICONS ============ -->
         <link href=\"https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css\" rel=\"stylesheet\"> 
 
@@ -89,34 +92,34 @@ class __TwigTemplate_2019cdc17f1387250cb292a8f53c8f43 extends Template
         
         <!-- ============ MAIN CSS ============ -->
         <link rel=\"stylesheet\" href=\"";
-        // line 26
+        // line 29
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/main.style.css"), "html", null, true);
         echo "\">
 
         ";
-        // line 28
-        $this->displayBlock('stylesheets', $context, $blocks);
         // line 31
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 34
         echo "
     </head>
     <body>
         <!-- Begin::Header -->
         ";
-        // line 35
+        // line 38
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("App\\Controller\\FrontController::header"));
         echo "
         <!-- End::Header -->
 
         <!-- Begin::Body -->
         ";
-        // line 39
+        // line 42
         $this->displayBlock('body', $context, $blocks);
-        // line 40
+        // line 43
         echo "        <!-- End::Body -->
 
         <!-- Begin::Footer -->
         ";
-        // line 43
+        // line 46
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("App\\Controller\\FrontController::footer"));
         echo "
         <!-- End::Footer -->
@@ -124,6 +127,9 @@ class __TwigTemplate_2019cdc17f1387250cb292a8f53c8f43 extends Template
         <!-- ============ Bootstrap Bundle with Popper ============ -->
         <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM\" crossorigin=\"anonymous\"></script>
 
+        <!-- ============ Leaflet CSS ============ -->
+        <script src=\"https://unpkg.com/leaflet@1.9.4/dist/leaflet.js\" integrity=\"sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=\" crossorigin=\"\"></script>
+        
         <!-- ============ SCROLLREVEAL ============ -->
         <script src=\"https://unpkg.com/scrollreveal\"></script>
 
@@ -133,14 +139,14 @@ class __TwigTemplate_2019cdc17f1387250cb292a8f53c8f43 extends Template
         <!-- ============ MAIN JS ============ -->
         <script src=\"https://code.jquery.com/jquery-3.7.0.min.js\" integrity=\"sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=\" crossorigin=\"anonymous\"></script>
         <script src=\"";
-        // line 57
+        // line 63
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/main.script.js"), "html", null, true);
         echo "\"></script>
 
         ";
-        // line 59
+        // line 65
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 62
+        // line 68
         echo "    </body>
 </html>
 ";
@@ -188,7 +194,7 @@ class __TwigTemplate_2019cdc17f1387250cb292a8f53c8f43 extends Template
 
     }
 
-    // line 28
+    // line 31
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -198,9 +204,9 @@ class __TwigTemplate_2019cdc17f1387250cb292a8f53c8f43 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 29
+        // line 32
         echo "            ";
-        // line 30
+        // line 33
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -210,7 +216,7 @@ class __TwigTemplate_2019cdc17f1387250cb292a8f53c8f43 extends Template
 
     }
 
-    // line 39
+    // line 42
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -228,7 +234,7 @@ class __TwigTemplate_2019cdc17f1387250cb292a8f53c8f43 extends Template
 
     }
 
-    // line 59
+    // line 65
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -238,9 +244,9 @@ class __TwigTemplate_2019cdc17f1387250cb292a8f53c8f43 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 60
+        // line 66
         echo "            ";
-        // line 61
+        // line 67
         echo "        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -262,7 +268,7 @@ class __TwigTemplate_2019cdc17f1387250cb292a8f53c8f43 extends Template
 
     public function getDebugInfo()
     {
-        return array (  244 => 61,  242 => 60,  232 => 59,  214 => 39,  204 => 30,  202 => 29,  192 => 28,  174 => 8,  156 => 7,  144 => 62,  142 => 59,  137 => 57,  120 => 43,  115 => 40,  113 => 39,  106 => 35,  100 => 31,  98 => 28,  93 => 26,  78 => 14,  74 => 13,  70 => 12,  66 => 11,  60 => 8,  56 => 7,  48 => 1,);
+        return array (  250 => 67,  248 => 66,  238 => 65,  220 => 42,  210 => 33,  208 => 32,  198 => 31,  180 => 8,  162 => 7,  150 => 68,  148 => 65,  143 => 63,  123 => 46,  118 => 43,  116 => 42,  109 => 38,  103 => 34,  101 => 31,  96 => 29,  78 => 14,  74 => 13,  70 => 12,  66 => 11,  60 => 8,  56 => 7,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -284,6 +290,9 @@ class __TwigTemplate_2019cdc17f1387250cb292a8f53c8f43 extends Template
 
         <!-- ============ Bootstrap CSS ============ -->
         <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\">
+
+        <!-- ============ Leaflet CSS ============ -->
+        <link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css\" integrity=\"sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=\" crossorigin=\"\" />
 
         <!-- ============ REMIXICONS ============ -->
         <link href=\"https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css\" rel=\"stylesheet\"> 
@@ -315,6 +324,9 @@ class __TwigTemplate_2019cdc17f1387250cb292a8f53c8f43 extends Template
         <!-- ============ Bootstrap Bundle with Popper ============ -->
         <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM\" crossorigin=\"anonymous\"></script>
 
+        <!-- ============ Leaflet CSS ============ -->
+        <script src=\"https://unpkg.com/leaflet@1.9.4/dist/leaflet.js\" integrity=\"sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=\" crossorigin=\"\"></script>
+        
         <!-- ============ SCROLLREVEAL ============ -->
         <script src=\"https://unpkg.com/scrollreveal\"></script>
 

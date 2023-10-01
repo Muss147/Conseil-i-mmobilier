@@ -158,6 +158,9 @@ i.ri-checkbox-circle-fill {
     -o-transform: scale(1.1);
     -ms-transform: scale(1.1);
 }
+#blog .swiper-button-next:hover, #blog .swiper-button-prev:hover {
+    color: var(--seconde-color) !important;
+}
 
 /* -- Contact -- */
 #contact > .row {
@@ -189,7 +192,7 @@ i.ri-checkbox-circle-fill {
 
     }
 
-    // line 82
+    // line 85
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -199,35 +202,42 @@ i.ri-checkbox-circle-fill {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 83
+        // line 86
         echo "<!-- Begin:: Carrousel -->
 <section class=\"swiper homeCarrousel h-100\">
     <div class=\"swiper-wrapper text-white\">
         <div class=\"swiper-slide\" style=\"background-image: linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgb(255, 255, 255)), url(";
-        // line 86
+        // line 89
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/illustrations/home-cover-1.jpg"), "html", null, true);
         echo "); background-size: cover;\">
             <div class=\"container\">
                 <div class=\"w-100 w-sm-50\">
-                    <span class=\"text-uppercase\">Expertise</span>
-                    <h1 class=\"ff-title fw-bold fs-biggest text-white\">Votre source pour tous vos besoins immobiliers</h1>
+                    <span class=\"text-uppercase\">Mission</span>
+                    <h1 class=\"ff-title fw-bold fs-biggest text-white\">Votre confiance, notre expertise, votre satisfaction</h1>
                 </div>
             </div>
         </div>
         <div class=\"swiper-slide\" style=\"background-image: linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgb(255, 255, 255)), url(";
-        // line 94
+        // line 97
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/illustrations/home-cover-2.jpeg"), "html", null, true);
         echo "); background-size: cover;\">
+            <div class=\"container\">
+                <div class=\"w-100 w-sm-50\">
+                    <span class=\"text-uppercase\">Expertise</span>
+                    <h1 class=\"ff-title fw-bold fs-biggest text-white\">Gestion immobilière pour tous vos besoins</h1>
+                </div>
+            </div>
         </div>
-        <div class=\"swiper-slide\" style=\"background-image: linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgb(255, 255, 255)), url(";
-        // line 96
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/illustrations/home-cover-3.jpg"), "html", null, true);
-        echo "); background-size: cover;\">
-        </div>
-    </div>
+        ";
+        // line 113
+        echo "    </div>
 
-    <div class=\"swiper-button-next\"></div>
-    <div class=\"swiper-button-prev\"></div>
+    <div class=\"swiper-button-next rounded-circle text-white\" style=\"padding: 35px; background: rgba(0,0,0,0.5);\">
+        <i class=\"ri-arrow-right-s-line fs-3\"></i>
+    </div>
+    <div class=\"swiper-button-prev rounded-circle text-white\" style=\"padding: 35px; background: rgba(0,0,0,0.5);\">
+        <i class=\"ri-arrow-left-s-line fs-3\"></i>
+    </div>
 </section>
 <!-- End:: Carrousel -->
 
@@ -238,9 +248,12 @@ i.ri-checkbox-circle-fill {
             <div class=\"py-5 py-sm-6 pe-0 pe-sm-5\">
                 <h2 class=\"section__title\">Conseil I-mmobilier</h2>
                 ";
-        // line 114
+        // line 133
         echo "                <p>Votre projet immobilier partout en France et en Côte d'Ivoire.
-                Achat, vente, location, location saisonnière, projet de construction, Conseil I-mmobilier s'occupe de tout Contactez-nous et découvrez nos solutions d'accompagnement sur mesure.</p>
+                Achat, vente, location, location saisonnière, projet de construction, Conseil I-mmobilier s'occupe de tout Contactez-nous et découvrez nos solutions d'accompagnement sur mesure... <a href=\"";
+        // line 134
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_about");
+        echo "\" class=\"btn btn-link text-muted\">En savoir plus</a></p>
                 <p class=\"ff-title d-flex flex-column m-0\">
                     <strong>Mme Barry Indira</strong>
                     <span>Conseil Immobilier</span>
@@ -249,7 +262,7 @@ i.ri-checkbox-circle-fill {
         </div>
         <div class=\"col-sm-6 position-relative\">
             <img alt=\"Mme Indira Barry\" src=\"";
-        // line 123
+        // line 142
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/illustrations/indira.jpeg"), "html", null, true);
         echo "\" class=\"position-relative position-sm-absolute bottom-0 end-0\">
         </div>
@@ -268,7 +281,6 @@ i.ri-checkbox-circle-fill {
                     </span>
                     <h4 class=\"ff-title\">Compréhension de votre projet</h4>
                     <p>Nous prenons le temps de comprendre votre projet et de vous proposer la meilleure offre.</p>
-                    <a href=\"\" class=\"btn btn-link text-muted\">En savoir plus</a>
                 </div>
                 <div class=\"rounded shadow p-4\">
                     <span class=\"service__icon rounded\">
@@ -276,7 +288,6 @@ i.ri-checkbox-circle-fill {
                     </span>
                     <h4 class=\"ff-title\">Organisation des visites</h4>
                     <p>Nous organisons pour vous les visites et visitons ave vous le cas éch@ant afin de vous apporter les meilleurs conseils.</p>
-                    <a href=\"\" class=\"btn btn-link text-muted\">En savoir plus</a>
                 </div>
             </div>
             <div class=\"col-6 d-flex align-items-center\">
@@ -286,7 +297,6 @@ i.ri-checkbox-circle-fill {
                     </span>
                     <h4 class=\"ff-title\">Accompagnement dans la recherche de financement</h4>
                     <p>Nous travailions ave des partenaires financier pouvant vous apporter une solution de financement.</p>
-                    <a href=\"\" class=\"btn btn-link text-muted\">En savoir plus</a>
                 </div>
             </div>
         </div>
@@ -307,7 +317,10 @@ i.ri-checkbox-circle-fill {
                         <span class=\"d-inline-block\">Projet de construction <i class=\"ri-checkbox-circle-fill align-middle\"></i></span>
                     </div>
                 </div>
-                <a href=\"\" class=\"btn btn-secondary\">Consulter nos services</a>
+                <a href=\"";
+        // line 195
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_services");
+        echo "\" class=\"btn btn-secondary\">Consulter nos services</a>
             </div>
         </div>
         <div class=\"col-lg-6 row d-flex d-lg-none\">
@@ -318,7 +331,6 @@ i.ri-checkbox-circle-fill {
                     </span>
                     <h4 class=\"ff-title\">Compréhension de votre projet</h4>
                     <p>Nous prenons le temps de comprendre votre projet et de vous proposer la meilleure offre.</p>
-                    <a href=\"\" class=\"btn btn-link text-muted\">En savoir plus</a>
                 </div>
             </div>
             <div class=\"col-sm-4\">
@@ -328,7 +340,6 @@ i.ri-checkbox-circle-fill {
                     </span>
                     <h4 class=\"ff-title\">Organisation des visites</h4>
                     <p>Nous organisons pour vous les visites et visitons ave vous le cas éch@ant afin de vous apporter les meilleurs conseils.</p>
-                    <a href=\"\" class=\"btn btn-link text-muted\">En savoir plus</a>
                 </div>
             </div>
             <div class=\"col-sm-4\">
@@ -338,7 +349,6 @@ i.ri-checkbox-circle-fill {
                     </span>
                     <h4 class=\"ff-title\">Accompagnement dans la recherche de financement</h4>
                     <p>Nous travailions ave des partenaires financier pouvant vous apporter une solution de financement.</p>
-                    <a href=\"\" class=\"btn btn-link text-muted\">En savoir plus</a>
                 </div>
             </div>
         </div>
@@ -355,14 +365,14 @@ i.ri-checkbox-circle-fill {
                 <div class=\"swiper-slide blog__card bg-white rounded p-2\">
                     <div class=\"blog__img rounded\">
                         <img alt=\"\" src=\"";
-        // line 226
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/illustrations/blog__interior.jpg"), "html", null, true);
+        // line 239
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/illustrations/blank-img.jpg"), "html", null, true);
         echo "\" class=\"rounded w-100\">
                     </div>
                     <div class=\"p-2\">
                         <h4 class=\"text-primary h5 my-3\">Top 10 best appreci ating</h4>
                         <span class=\"\"></span>
-                        <p>New York County as a whole covers a total area of 33.77 square miles (87.5 km2), of which 22.96 square miles (59.5)...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>
                         <a href=\"\" class=\"btn btn-link btn-alt text-secondary\">
                             Lire la suite 
                             <i class=\"ri-arrow-right-s-line align-middle\"></i>
@@ -372,14 +382,14 @@ i.ri-checkbox-circle-fill {
                 <div class=\"swiper-slide blog__card bg-white rounded p-2\">
                     <div class=\"blog__img rounded\">
                         <img alt=\"\" src=\"";
-        // line 240
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/illustrations/blog__interior.jpg"), "html", null, true);
+        // line 253
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/illustrations/blank-img.jpg"), "html", null, true);
         echo "\" class=\"rounded w-100\">
                     </div>
                     <div class=\"p-2\">
                         <h4 class=\"text-primary h5 my-3\">Top 10 best appreci ating</h4>
                         <span class=\"\"></span>
-                        <p>New York County as a whole covers a total area of 33.77 square miles (87.5 km2), of which 22.96 square miles (59.5)...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>
                         <a href=\"\" class=\"btn btn-link btn-alt text-secondary\">
                             Lire la suite 
                             <i class=\"ri-arrow-right-s-line align-middle\"></i>
@@ -389,14 +399,14 @@ i.ri-checkbox-circle-fill {
                 <div class=\"swiper-slide blog__card bg-white rounded p-2\">
                     <div class=\"blog__img rounded\">
                         <img alt=\"\" src=\"";
-        // line 254
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/illustrations/blog__interior.jpg"), "html", null, true);
+        // line 267
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/illustrations/blank-img.jpg"), "html", null, true);
         echo "\" class=\"rounded w-100\">
                     </div>
                     <div class=\"p-2\">
                         <h4 class=\"text-primary h5 my-3\">Top 10 best appreci ating</h4>
                         <span class=\"\"></span>
-                        <p>New York County as a whole covers a total area of 33.77 square miles (87.5 km2), of which 22.96 square miles (59.5)...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>
                         <a href=\"\" class=\"btn btn-link btn-alt text-secondary\">
                             Lire la suite 
                             <i class=\"ri-arrow-right-s-line align-middle\"></i>
@@ -406,14 +416,14 @@ i.ri-checkbox-circle-fill {
                 <div class=\"swiper-slide blog__card bg-white rounded p-2\">
                     <div class=\"blog__img rounded\">
                         <img alt=\"\" src=\"";
-        // line 268
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/illustrations/blog__interior.jpg"), "html", null, true);
+        // line 281
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/illustrations/blank-img.jpg"), "html", null, true);
         echo "\" class=\"rounded w-100\">
                     </div>
                     <div class=\"p-2\">
                         <h4 class=\"text-primary h5 my-3\">Top 10 best appreci ating</h4>
                         <span class=\"\"></span>
-                        <p>New York County as a whole covers a total area of 33.77 square miles (87.5 km2), of which 22.96 square miles (59.5)...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>
                         <a href=\"\" class=\"btn btn-link btn-alt text-secondary\">
                             Lire la suite 
                             <i class=\"ri-arrow-right-s-line align-middle\"></i>
@@ -423,14 +433,14 @@ i.ri-checkbox-circle-fill {
                 <div class=\"swiper-slide blog__card bg-white rounded p-2\">
                     <div class=\"blog__img rounded\">
                         <img alt=\"\" src=\"";
-        // line 282
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/illustrations/blog__interior.jpg"), "html", null, true);
+        // line 295
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/illustrations/blank-img.jpg"), "html", null, true);
         echo "\" class=\"rounded w-100\">
                     </div>
                     <div class=\"p-2\">
                         <h4 class=\"text-primary h5 my-3\">Top 10 best appreci ating</h4>
                         <span class=\"\"></span>
-                        <p>New York County as a whole covers a total area of 33.77 square miles (87.5 km2), of which 22.96 square miles (59.5)...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>
                         <a href=\"\" class=\"btn btn-link btn-alt text-secondary\">
                             Lire la suite 
                             <i class=\"ri-arrow-right-s-line align-middle\"></i>
@@ -440,14 +450,14 @@ i.ri-checkbox-circle-fill {
                 <div class=\"swiper-slide blog__card bg-white rounded p-2\">
                     <div class=\"blog__img rounded\">
                         <img alt=\"\" src=\"";
-        // line 296
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/illustrations/blog__interior.jpg"), "html", null, true);
+        // line 309
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/illustrations/blank-img.jpg"), "html", null, true);
         echo "\" class=\"rounded w-100\">
                     </div>
                     <div class=\"p-2\">
                         <h4 class=\"text-primary h5 my-3\">Top 10 best appreci ating</h4>
                         <span class=\"\"></span>
-                        <p>New York County as a whole covers a total area of 33.77 square miles (87.5 km2), of which 22.96 square miles (59.5)...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>
                         <a href=\"\" class=\"btn btn-link btn-alt text-secondary\">
                             Lire la suite 
                             <i class=\"ri-arrow-right-s-line align-middle\"></i>
@@ -455,11 +465,11 @@ i.ri-checkbox-circle-fill {
                     </div>
                 </div>
             </div>
-            <div class=\"swiper-button-next\">
-                <i class=\"ri-arrow-right-line\"></i>
+            <div class=\"swiper-button-next bg-white rounded text-muted\" style=\"width: 40px; height: 40px;\">
+                <i class=\"ri-arrow-right-line fw-bold\"></i>
             </div>
-            <div class=\"swiper-button-prev\">
-                <i class=\"ri-arrow-left-line\"></i>
+            <div class=\"swiper-button-prev bg-white rounded text-muted\" style=\"width: 40px; height: 40px;\">
+                <i class=\"ri-arrow-left-line fw-bold\"></i>
             </div>
         </div>
     </div>
@@ -467,47 +477,11 @@ i.ri-checkbox-circle-fill {
 <!-- End:: Blog section -->
 
 <!-- Begin:: Contact section -->
-<section id=\"contact\" class=\"container section\">
-    <div class=\"row\">
-        <div class=\"col-md-6 p-5\">
-            <h2 class=\"section__title\">Et si on gardait le contact</h2>
-            <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-            
-            <form class=\"form row\" action=\"\" method=\"POST\">
-                <div class=\"col-sm-6 mb-3\">
-                    <label for=\"nom\">Nom<sup>*</sup></label>
-                    <input type=\"text\" id=\"nom\" class=\"form-control\" name=\"nom\" placeholder=\"Nom\" required>
-                </div>
-                <div class=\"col-sm-6 mb-3\">
-                    <label for=\"prenom\">Prénom<sup>*</sup></label>
-                    <input type=\"text\" id=\"prenom\" class=\"form-control\" name=\"prenom\" placeholder=\"Prénom\" required>
-                </div>
-                <div class=\"col-sm-6 mb-3\">
-                    <label for=\"email\">Email<sup>*</sup></label>
-                    <input type=\"email\" id=\"email\" class=\"form-control\" name=\"email\" placeholder=\"Email\" required>
-                </div>
-                <div class=\"col-sm-6 mb-3\">
-                    <label for=\"telephone\">Téléphone</label>
-                    <input type=\"tel\" id=\"telephone\" class=\"form-control\" name=\"telephone\" placeholder=\"Téléphone\">
-                </div>
-                <div class=\"col-12 mb-3\">
-                    <label for=\"message\">Message</label>
-                    <textarea rows=\"5\" id=\"message\" class=\"form-control\" name=\"message\" placeholder=\"Dites-nous tout...\"></textarea>
-                </div>
-                <div class=\"col-12 d-grid\">
-                    <button type=\"submit\" class=\"btn btn-secondary btn-block\">Envoyer le message</button>
-                </div>
-            </form>
-        </div>
-        <div class=\"col-md-6 p-3 p-sm-0\">
-            <img alt=\"indira2\" src=\"";
-        // line 354
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/illustrations/indira2.jpeg"), "html", null, true);
-        echo "\" class=\"w-100 h-100\" style=\"max-height: 625px; object-fit: cover\">
-        </div>
-    </div>
-</section>
-<!-- End:: Contact section -->
+";
+        // line 334
+        $this->loadTemplate("front/_contact.html.twig", "front/home.html.twig", 334)->display(twig_array_merge($context, ["contactTitle" => "Et si on gardait le contact"]));
+        // line 335
+        echo "<!-- End:: Contact section -->
 
 ";
         
@@ -518,7 +492,7 @@ i.ri-checkbox-circle-fill {
 
     }
 
-    // line 362
+    // line 339
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -528,19 +502,22 @@ i.ri-checkbox-circle-fill {
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 363
+        // line 340
         echo "<script type=\"text/javascript\">
     var swiper = new Swiper(\".homeCarrousel\", {
+        loop: true,
         cssMode: true,
+        autoplay: {
+            delay: 7000,
+            disableOnInteraction: false,
+        },
         navigation: {
             nextEl: \".swiper-button-next\",
             prevEl: \".swiper-button-prev\",
         },
         pagination: {
             el: \".swiper-pagination\",
-        },
-        mousewheel: true,
-        keyboard: true,
+        }
     });
 
     let swiperBlog = new Swiper(\".blog__container\", {
@@ -587,7 +564,7 @@ i.ri-checkbox-circle-fill {
 
     public function getDebugInfo()
     {
-        return array (  532 => 363,  522 => 362,  505 => 354,  444 => 296,  427 => 282,  410 => 268,  393 => 254,  376 => 240,  359 => 226,  253 => 123,  242 => 114,  224 => 96,  219 => 94,  208 => 86,  203 => 83,  193 => 82,  110 => 7,  100 => 6,  81 => 4,  62 => 3,  39 => 1,);
+        return array (  506 => 340,  496 => 339,  484 => 335,  482 => 334,  454 => 309,  437 => 295,  420 => 281,  403 => 267,  386 => 253,  369 => 239,  322 => 195,  266 => 142,  255 => 134,  252 => 133,  233 => 113,  222 => 97,  211 => 89,  206 => 86,  196 => 85,  110 => 7,  100 => 6,  81 => 4,  62 => 3,  39 => 1,);
     }
 
     public function getSourceContext()
@@ -649,6 +626,9 @@ i.ri-checkbox-circle-fill {
     -o-transform: scale(1.1);
     -ms-transform: scale(1.1);
 }
+#blog .swiper-button-next:hover, #blog .swiper-button-prev:hover {
+    color: var(--seconde-color) !important;
+}
 
 /* -- Contact -- */
 #contact > .row {
@@ -680,19 +660,35 @@ i.ri-checkbox-circle-fill {
         <div class=\"swiper-slide\" style=\"background-image: linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgb(255, 255, 255)), url({{asset('assets/media/illustrations/home-cover-1.jpg')}}); background-size: cover;\">
             <div class=\"container\">
                 <div class=\"w-100 w-sm-50\">
-                    <span class=\"text-uppercase\">Expertise</span>
-                    <h1 class=\"ff-title fw-bold fs-biggest text-white\">Votre source pour tous vos besoins immobiliers</h1>
+                    <span class=\"text-uppercase\">Mission</span>
+                    <h1 class=\"ff-title fw-bold fs-biggest text-white\">Votre confiance, notre expertise, votre satisfaction</h1>
                 </div>
             </div>
         </div>
         <div class=\"swiper-slide\" style=\"background-image: linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgb(255, 255, 255)), url({{asset('assets/media/illustrations/home-cover-2.jpeg')}}); background-size: cover;\">
+            <div class=\"container\">
+                <div class=\"w-100 w-sm-50\">
+                    <span class=\"text-uppercase\">Expertise</span>
+                    <h1 class=\"ff-title fw-bold fs-biggest text-white\">Gestion immobilière pour tous vos besoins</h1>
+                </div>
+            </div>
         </div>
-        <div class=\"swiper-slide\" style=\"background-image: linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgb(255, 255, 255)), url({{asset('assets/media/illustrations/home-cover-3.jpg')}}); background-size: cover;\">
-        </div>
+        {# <div class=\"swiper-slide\" style=\"background-image: linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgb(255, 255, 255)), url({{asset('assets/media/illustrations/home-cover-3.jpg')}}); background-size: cover;\">
+            <div class=\"container\">
+                <div class=\"w-100 w-sm-50\">
+                    <span class=\"text-uppercase\">Expertise</span>
+                    <h1 class=\"ff-title fw-bold fs-biggest text-white\">Votre source pour tous vos besoins immobiliers</h1>
+                </div>
+            </div>
+        </div> #}
     </div>
 
-    <div class=\"swiper-button-next\"></div>
-    <div class=\"swiper-button-prev\"></div>
+    <div class=\"swiper-button-next rounded-circle text-white\" style=\"padding: 35px; background: rgba(0,0,0,0.5);\">
+        <i class=\"ri-arrow-right-s-line fs-3\"></i>
+    </div>
+    <div class=\"swiper-button-prev rounded-circle text-white\" style=\"padding: 35px; background: rgba(0,0,0,0.5);\">
+        <i class=\"ri-arrow-left-s-line fs-3\"></i>
+    </div>
 </section>
 <!-- End:: Carrousel -->
 
@@ -706,7 +702,7 @@ i.ri-checkbox-circle-fill {
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> #}
                 <p>Votre projet immobilier partout en France et en Côte d'Ivoire.
-                Achat, vente, location, location saisonnière, projet de construction, Conseil I-mmobilier s'occupe de tout Contactez-nous et découvrez nos solutions d'accompagnement sur mesure.</p>
+                Achat, vente, location, location saisonnière, projet de construction, Conseil I-mmobilier s'occupe de tout Contactez-nous et découvrez nos solutions d'accompagnement sur mesure... <a href=\"{{path('app_about')}}\" class=\"btn btn-link text-muted\">En savoir plus</a></p>
                 <p class=\"ff-title d-flex flex-column m-0\">
                     <strong>Mme Barry Indira</strong>
                     <span>Conseil Immobilier</span>
@@ -731,7 +727,6 @@ i.ri-checkbox-circle-fill {
                     </span>
                     <h4 class=\"ff-title\">Compréhension de votre projet</h4>
                     <p>Nous prenons le temps de comprendre votre projet et de vous proposer la meilleure offre.</p>
-                    <a href=\"\" class=\"btn btn-link text-muted\">En savoir plus</a>
                 </div>
                 <div class=\"rounded shadow p-4\">
                     <span class=\"service__icon rounded\">
@@ -739,7 +734,6 @@ i.ri-checkbox-circle-fill {
                     </span>
                     <h4 class=\"ff-title\">Organisation des visites</h4>
                     <p>Nous organisons pour vous les visites et visitons ave vous le cas éch@ant afin de vous apporter les meilleurs conseils.</p>
-                    <a href=\"\" class=\"btn btn-link text-muted\">En savoir plus</a>
                 </div>
             </div>
             <div class=\"col-6 d-flex align-items-center\">
@@ -749,7 +743,6 @@ i.ri-checkbox-circle-fill {
                     </span>
                     <h4 class=\"ff-title\">Accompagnement dans la recherche de financement</h4>
                     <p>Nous travailions ave des partenaires financier pouvant vous apporter une solution de financement.</p>
-                    <a href=\"\" class=\"btn btn-link text-muted\">En savoir plus</a>
                 </div>
             </div>
         </div>
@@ -770,7 +763,7 @@ i.ri-checkbox-circle-fill {
                         <span class=\"d-inline-block\">Projet de construction <i class=\"ri-checkbox-circle-fill align-middle\"></i></span>
                     </div>
                 </div>
-                <a href=\"\" class=\"btn btn-secondary\">Consulter nos services</a>
+                <a href=\"{{path('app_services')}}\" class=\"btn btn-secondary\">Consulter nos services</a>
             </div>
         </div>
         <div class=\"col-lg-6 row d-flex d-lg-none\">
@@ -781,7 +774,6 @@ i.ri-checkbox-circle-fill {
                     </span>
                     <h4 class=\"ff-title\">Compréhension de votre projet</h4>
                     <p>Nous prenons le temps de comprendre votre projet et de vous proposer la meilleure offre.</p>
-                    <a href=\"\" class=\"btn btn-link text-muted\">En savoir plus</a>
                 </div>
             </div>
             <div class=\"col-sm-4\">
@@ -791,7 +783,6 @@ i.ri-checkbox-circle-fill {
                     </span>
                     <h4 class=\"ff-title\">Organisation des visites</h4>
                     <p>Nous organisons pour vous les visites et visitons ave vous le cas éch@ant afin de vous apporter les meilleurs conseils.</p>
-                    <a href=\"\" class=\"btn btn-link text-muted\">En savoir plus</a>
                 </div>
             </div>
             <div class=\"col-sm-4\">
@@ -801,7 +792,6 @@ i.ri-checkbox-circle-fill {
                     </span>
                     <h4 class=\"ff-title\">Accompagnement dans la recherche de financement</h4>
                     <p>Nous travailions ave des partenaires financier pouvant vous apporter une solution de financement.</p>
-                    <a href=\"\" class=\"btn btn-link text-muted\">En savoir plus</a>
                 </div>
             </div>
         </div>
@@ -817,12 +807,12 @@ i.ri-checkbox-circle-fill {
             <div class=\"swiper-wrapper\">
                 <div class=\"swiper-slide blog__card bg-white rounded p-2\">
                     <div class=\"blog__img rounded\">
-                        <img alt=\"\" src=\"{{asset('assets/media/illustrations/blog__interior.jpg')}}\" class=\"rounded w-100\">
+                        <img alt=\"\" src=\"{{asset('assets/media/illustrations/blank-img.jpg')}}\" class=\"rounded w-100\">
                     </div>
                     <div class=\"p-2\">
                         <h4 class=\"text-primary h5 my-3\">Top 10 best appreci ating</h4>
                         <span class=\"\"></span>
-                        <p>New York County as a whole covers a total area of 33.77 square miles (87.5 km2), of which 22.96 square miles (59.5)...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>
                         <a href=\"\" class=\"btn btn-link btn-alt text-secondary\">
                             Lire la suite 
                             <i class=\"ri-arrow-right-s-line align-middle\"></i>
@@ -831,12 +821,12 @@ i.ri-checkbox-circle-fill {
                 </div>
                 <div class=\"swiper-slide blog__card bg-white rounded p-2\">
                     <div class=\"blog__img rounded\">
-                        <img alt=\"\" src=\"{{asset('assets/media/illustrations/blog__interior.jpg')}}\" class=\"rounded w-100\">
+                        <img alt=\"\" src=\"{{asset('assets/media/illustrations/blank-img.jpg')}}\" class=\"rounded w-100\">
                     </div>
                     <div class=\"p-2\">
                         <h4 class=\"text-primary h5 my-3\">Top 10 best appreci ating</h4>
                         <span class=\"\"></span>
-                        <p>New York County as a whole covers a total area of 33.77 square miles (87.5 km2), of which 22.96 square miles (59.5)...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>
                         <a href=\"\" class=\"btn btn-link btn-alt text-secondary\">
                             Lire la suite 
                             <i class=\"ri-arrow-right-s-line align-middle\"></i>
@@ -845,12 +835,12 @@ i.ri-checkbox-circle-fill {
                 </div>
                 <div class=\"swiper-slide blog__card bg-white rounded p-2\">
                     <div class=\"blog__img rounded\">
-                        <img alt=\"\" src=\"{{asset('assets/media/illustrations/blog__interior.jpg')}}\" class=\"rounded w-100\">
+                        <img alt=\"\" src=\"{{asset('assets/media/illustrations/blank-img.jpg')}}\" class=\"rounded w-100\">
                     </div>
                     <div class=\"p-2\">
                         <h4 class=\"text-primary h5 my-3\">Top 10 best appreci ating</h4>
                         <span class=\"\"></span>
-                        <p>New York County as a whole covers a total area of 33.77 square miles (87.5 km2), of which 22.96 square miles (59.5)...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>
                         <a href=\"\" class=\"btn btn-link btn-alt text-secondary\">
                             Lire la suite 
                             <i class=\"ri-arrow-right-s-line align-middle\"></i>
@@ -859,12 +849,12 @@ i.ri-checkbox-circle-fill {
                 </div>
                 <div class=\"swiper-slide blog__card bg-white rounded p-2\">
                     <div class=\"blog__img rounded\">
-                        <img alt=\"\" src=\"{{asset('assets/media/illustrations/blog__interior.jpg')}}\" class=\"rounded w-100\">
+                        <img alt=\"\" src=\"{{asset('assets/media/illustrations/blank-img.jpg')}}\" class=\"rounded w-100\">
                     </div>
                     <div class=\"p-2\">
                         <h4 class=\"text-primary h5 my-3\">Top 10 best appreci ating</h4>
                         <span class=\"\"></span>
-                        <p>New York County as a whole covers a total area of 33.77 square miles (87.5 km2), of which 22.96 square miles (59.5)...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>
                         <a href=\"\" class=\"btn btn-link btn-alt text-secondary\">
                             Lire la suite 
                             <i class=\"ri-arrow-right-s-line align-middle\"></i>
@@ -873,12 +863,12 @@ i.ri-checkbox-circle-fill {
                 </div>
                 <div class=\"swiper-slide blog__card bg-white rounded p-2\">
                     <div class=\"blog__img rounded\">
-                        <img alt=\"\" src=\"{{asset('assets/media/illustrations/blog__interior.jpg')}}\" class=\"rounded w-100\">
+                        <img alt=\"\" src=\"{{asset('assets/media/illustrations/blank-img.jpg')}}\" class=\"rounded w-100\">
                     </div>
                     <div class=\"p-2\">
                         <h4 class=\"text-primary h5 my-3\">Top 10 best appreci ating</h4>
                         <span class=\"\"></span>
-                        <p>New York County as a whole covers a total area of 33.77 square miles (87.5 km2), of which 22.96 square miles (59.5)...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>
                         <a href=\"\" class=\"btn btn-link btn-alt text-secondary\">
                             Lire la suite 
                             <i class=\"ri-arrow-right-s-line align-middle\"></i>
@@ -887,12 +877,12 @@ i.ri-checkbox-circle-fill {
                 </div>
                 <div class=\"swiper-slide blog__card bg-white rounded p-2\">
                     <div class=\"blog__img rounded\">
-                        <img alt=\"\" src=\"{{asset('assets/media/illustrations/blog__interior.jpg')}}\" class=\"rounded w-100\">
+                        <img alt=\"\" src=\"{{asset('assets/media/illustrations/blank-img.jpg')}}\" class=\"rounded w-100\">
                     </div>
                     <div class=\"p-2\">
                         <h4 class=\"text-primary h5 my-3\">Top 10 best appreci ating</h4>
                         <span class=\"\"></span>
-                        <p>New York County as a whole covers a total area of 33.77 square miles (87.5 km2), of which 22.96 square miles (59.5)...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>
                         <a href=\"\" class=\"btn btn-link btn-alt text-secondary\">
                             Lire la suite 
                             <i class=\"ri-arrow-right-s-line align-middle\"></i>
@@ -900,11 +890,11 @@ i.ri-checkbox-circle-fill {
                     </div>
                 </div>
             </div>
-            <div class=\"swiper-button-next\">
-                <i class=\"ri-arrow-right-line\"></i>
+            <div class=\"swiper-button-next bg-white rounded text-muted\" style=\"width: 40px; height: 40px;\">
+                <i class=\"ri-arrow-right-line fw-bold\"></i>
             </div>
-            <div class=\"swiper-button-prev\">
-                <i class=\"ri-arrow-left-line\"></i>
+            <div class=\"swiper-button-prev bg-white rounded text-muted\" style=\"width: 40px; height: 40px;\">
+                <i class=\"ri-arrow-left-line fw-bold\"></i>
             </div>
         </div>
     </div>
@@ -912,43 +902,7 @@ i.ri-checkbox-circle-fill {
 <!-- End:: Blog section -->
 
 <!-- Begin:: Contact section -->
-<section id=\"contact\" class=\"container section\">
-    <div class=\"row\">
-        <div class=\"col-md-6 p-5\">
-            <h2 class=\"section__title\">Et si on gardait le contact</h2>
-            <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-            
-            <form class=\"form row\" action=\"\" method=\"POST\">
-                <div class=\"col-sm-6 mb-3\">
-                    <label for=\"nom\">Nom<sup>*</sup></label>
-                    <input type=\"text\" id=\"nom\" class=\"form-control\" name=\"nom\" placeholder=\"Nom\" required>
-                </div>
-                <div class=\"col-sm-6 mb-3\">
-                    <label for=\"prenom\">Prénom<sup>*</sup></label>
-                    <input type=\"text\" id=\"prenom\" class=\"form-control\" name=\"prenom\" placeholder=\"Prénom\" required>
-                </div>
-                <div class=\"col-sm-6 mb-3\">
-                    <label for=\"email\">Email<sup>*</sup></label>
-                    <input type=\"email\" id=\"email\" class=\"form-control\" name=\"email\" placeholder=\"Email\" required>
-                </div>
-                <div class=\"col-sm-6 mb-3\">
-                    <label for=\"telephone\">Téléphone</label>
-                    <input type=\"tel\" id=\"telephone\" class=\"form-control\" name=\"telephone\" placeholder=\"Téléphone\">
-                </div>
-                <div class=\"col-12 mb-3\">
-                    <label for=\"message\">Message</label>
-                    <textarea rows=\"5\" id=\"message\" class=\"form-control\" name=\"message\" placeholder=\"Dites-nous tout...\"></textarea>
-                </div>
-                <div class=\"col-12 d-grid\">
-                    <button type=\"submit\" class=\"btn btn-secondary btn-block\">Envoyer le message</button>
-                </div>
-            </form>
-        </div>
-        <div class=\"col-md-6 p-3 p-sm-0\">
-            <img alt=\"indira2\" src=\"{{asset('assets/media/illustrations/indira2.jpeg')}}\" class=\"w-100 h-100\" style=\"max-height: 625px; object-fit: cover\">
-        </div>
-    </div>
-</section>
+{% include 'front/_contact.html.twig' with {'contactTitle': 'Et si on gardait le contact'} %}
 <!-- End:: Contact section -->
 
 {% endblock %}
@@ -956,16 +910,19 @@ i.ri-checkbox-circle-fill {
 {% block javascripts %}
 <script type=\"text/javascript\">
     var swiper = new Swiper(\".homeCarrousel\", {
+        loop: true,
         cssMode: true,
+        autoplay: {
+            delay: 7000,
+            disableOnInteraction: false,
+        },
         navigation: {
             nextEl: \".swiper-button-next\",
             prevEl: \".swiper-button-prev\",
         },
         pagination: {
             el: \".swiper-pagination\",
-        },
-        mousewheel: true,
-        keyboard: true,
+        }
     });
 
     let swiperBlog = new Swiper(\".blog__container\", {

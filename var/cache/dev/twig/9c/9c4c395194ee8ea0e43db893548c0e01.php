@@ -43,33 +43,45 @@ class __TwigTemplate_156206f05a5c9ed41c7ea486617dd54e extends Template
         echo "<header id=\"header\" class=\"fixed-top w-100\">
     <nav class=\"container d-flex align-items-center justify-content-between\">
         <div class=\"nav__logo\">
-            <a href=\"\"><img alt=\"Conseil I mmobilier\" src=\"";
+            <a href=\"";
         // line 4
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/logos/conseil-immobilier.png"), "html", null, true);
-        echo "\"></a>
-        </div>
-        <div class=\"nav__menu flex-fill\">
-            <ul class=\"list d-flex gap-5 align-items-center justify-content-center\">
-                <li><a href=\"";
-        // line 8
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
-        echo "\" class=\"nav__link\">Accueil</a></li>
+        echo "\">
+                <img alt=\"Conseil I mmobilier\" src=\"";
+        // line 5
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/logos/conseil-immobilier-white.png"), "html", null, true);
+        echo "\" class=\"logo-white\">
+                <img alt=\"Conseil I mmobilier\" src=\"";
+        // line 6
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/media/logos/conseil-immobilier-blue.png"), "html", null, true);
+        echo "\" class=\"logo-blue d-none\">
+            </a>
+        </div>
+        <div id=\"nav__menu\" class=\"nav__menu flex-fill\">
+            <ul class=\"list d-flex flex-column flex-lg-row gap-5 align-items-center justify-content-center\">
                 <li><a href=\"";
-        // line 9
+        // line 11
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_about");
         echo "\" class=\"nav__link\">À propos</a></li>
                 <li><a href=\"";
-        // line 10
+        // line 12
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_services");
         echo "\" class=\"nav__link\">Services</a></li>
-                <li><a href=\"\" class=\"nav__link\">Contact</a></li>
+                <li><a href=\"";
+        // line 13
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_blog");
+        echo "\" class=\"nav__link\">Blog</a></li>
+                <li><a href=\"";
+        // line 14
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact");
+        echo "\" class=\"nav__link\">Contact</a></li>
             </ul>
             <!-- Close button -->
             <div class=\"nav__close\" id=\"nav-close\">
                 <i class=\"ri-close-line\"></i>
             </div>
         </div>
-        <div class=\"nav__alt\">
+        <div class=\"d-none d-lg-block\">
             <a href=\"tel:0033615202035\" class=\"nav__link\">
                 <i class=\"ri-phone-fill align-middle\"></i>
                 +33 6 15 20 20 35
@@ -104,7 +116,7 @@ class __TwigTemplate_156206f05a5c9ed41c7ea486617dd54e extends Template
 
     public function getDebugInfo()
     {
-        return array (  63 => 10,  59 => 9,  55 => 8,  48 => 4,  43 => 1,);
+        return array (  76 => 14,  72 => 13,  68 => 12,  64 => 11,  56 => 6,  52 => 5,  48 => 4,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -112,21 +124,24 @@ class __TwigTemplate_156206f05a5c9ed41c7ea486617dd54e extends Template
         return new Source("<header id=\"header\" class=\"fixed-top w-100\">
     <nav class=\"container d-flex align-items-center justify-content-between\">
         <div class=\"nav__logo\">
-            <a href=\"\"><img alt=\"Conseil I mmobilier\" src=\"{{asset('assets/media/logos/conseil-immobilier.png')}}\"></a>
+            <a href=\"{{path('app_home')}}\">
+                <img alt=\"Conseil I mmobilier\" src=\"{{asset('assets/media/logos/conseil-immobilier-white.png')}}\" class=\"logo-white\">
+                <img alt=\"Conseil I mmobilier\" src=\"{{asset('assets/media/logos/conseil-immobilier-blue.png')}}\" class=\"logo-blue d-none\">
+            </a>
         </div>
-        <div class=\"nav__menu flex-fill\">
-            <ul class=\"list d-flex gap-5 align-items-center justify-content-center\">
-                <li><a href=\"{{path('app_home')}}\" class=\"nav__link\">Accueil</a></li>
+        <div id=\"nav__menu\" class=\"nav__menu flex-fill\">
+            <ul class=\"list d-flex flex-column flex-lg-row gap-5 align-items-center justify-content-center\">
                 <li><a href=\"{{path('app_about')}}\" class=\"nav__link\">À propos</a></li>
                 <li><a href=\"{{path('app_services')}}\" class=\"nav__link\">Services</a></li>
-                <li><a href=\"\" class=\"nav__link\">Contact</a></li>
+                <li><a href=\"{{path('app_blog')}}\" class=\"nav__link\">Blog</a></li>
+                <li><a href=\"{{path('app_contact')}}\" class=\"nav__link\">Contact</a></li>
             </ul>
             <!-- Close button -->
             <div class=\"nav__close\" id=\"nav-close\">
                 <i class=\"ri-close-line\"></i>
             </div>
         </div>
-        <div class=\"nav__alt\">
+        <div class=\"d-none d-lg-block\">
             <a href=\"tel:0033615202035\" class=\"nav__link\">
                 <i class=\"ri-phone-fill align-middle\"></i>
                 +33 6 15 20 20 35

@@ -59,8 +59,14 @@ class __TwigTemplate_f2164ff772087f10360552528023d652 extends Template
         // line 13
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_services");
         echo "\" class=\"text-link\">Services</a></li>
-                        <li><a href=\"\" class=\"text-link\">Blog</a></li>
-                        <li><a href=\"\" class=\"text-link\">Contact</a></li>
+                        <li><a href=\"";
+        // line 14
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_blog");
+        echo "\" class=\"text-link\">Blog</a></li>
+                        <li><a href=\"";
+        // line 15
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact");
+        echo "\" class=\"text-link\">Contact</a></li>
                     </ul>
                 </div>
                 <div class=\"col-sm-6 col-lg-3 mb-4\">
@@ -80,6 +86,10 @@ class __TwigTemplate_f2164ff772087f10360552528023d652 extends Template
                         <li><a href=\"tel:0033615202035\" class=\"text-link\">
                             <i class=\"ri-phone-fill align-middle\"></i>
                             +33 6 15 20 20 35
+                        </a></li>
+                        <li><a href=\"tel:002250788024985\" class=\"text-link\">
+                            <i class=\"ri-phone-fill align-middle\"></i>
+                            +225 07 880 249 85
                         </a></li>
                         <li><a href=\"mailto:contact@conseil-i-mmobilier.com\" class=\"text-link\">
                             <i class=\"ri-mail-open-fill align-middle\"></i>
@@ -111,7 +121,7 @@ class __TwigTemplate_f2164ff772087f10360552528023d652 extends Template
 
     public function getDebugInfo()
     {
-        return array (  60 => 13,  56 => 12,  43 => 1,);
+        return array (  68 => 15,  64 => 14,  60 => 13,  56 => 12,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -129,8 +139,8 @@ class __TwigTemplate_f2164ff772087f10360552528023d652 extends Template
                     <ul class=\"list\">
                         <li><a href=\"{{path('app_about')}}\" class=\"text-link\">À propos</a></li>
                         <li><a href=\"{{path('app_services')}}\" class=\"text-link\">Services</a></li>
-                        <li><a href=\"\" class=\"text-link\">Blog</a></li>
-                        <li><a href=\"\" class=\"text-link\">Contact</a></li>
+                        <li><a href=\"{{path('app_blog')}}\" class=\"text-link\">Blog</a></li>
+                        <li><a href=\"{{path('app_contact')}}\" class=\"text-link\">Contact</a></li>
                     </ul>
                 </div>
                 <div class=\"col-sm-6 col-lg-3 mb-4\">
@@ -150,6 +160,10 @@ class __TwigTemplate_f2164ff772087f10360552528023d652 extends Template
                         <li><a href=\"tel:0033615202035\" class=\"text-link\">
                             <i class=\"ri-phone-fill align-middle\"></i>
                             +33 6 15 20 20 35
+                        </a></li>
+                        <li><a href=\"tel:002250788024985\" class=\"text-link\">
+                            <i class=\"ri-phone-fill align-middle\"></i>
+                            +225 07 880 249 85
                         </a></li>
                         <li><a href=\"mailto:contact@conseil-i-mmobilier.com\" class=\"text-link\">
                             <i class=\"ri-mail-open-fill align-middle\"></i>

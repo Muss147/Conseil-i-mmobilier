@@ -1,0 +1,112 @@
+{% extends 'base.html.twig' %}
+
+{% block title "Contact" %}
+{% block description "" %}
+
+{% block stylesheets %}
+<style type="text/css">
+header:not(.scroll) nav {
+    color: var(--first-color) !important;
+}
+header.scroll {
+    z-index: 7001;
+}
+#map {
+    height: 450px;
+}
+/* -- Contact -- */
+.form-control {
+    border: 0;
+    background-color: #F8F9FA;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 9px 0px 9px 9px;
+}
+.form-control:focus {
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.1);
+    border: 1px solid transparent;
+    background-color: #F8F9FA;
+}
+.form-control::placeholder {
+    font-size: var(--smaller-font-size);
+    color: #a1a2a2;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<!-- Begin:: Carrousel -->
+<section class="mt-6">
+    <div id="map" class="position-relative">
+        <div class="position-absolute top-0 left-0 w-100 h-100 py-4">
+            <div class="container">
+                <div class="bg-white rounded shadow w-md-50 w-lg-25 p-3 p-sm-5">
+                    <h4 class="fw-bold text-primary">Comment nous trouver</h4>
+                    <ul class="list mb-4">
+                        <li class="mb-2">
+                            <i class="ri-community-fill align-middle"></i> 
+                            Abidjan, Cocody 2 plateaux Valon
+                        </li>
+                        <li class="mb-2"><a href="tel:0033615202035" class="text-link">
+                            <i class="ri-phone-fill align-middle"></i>
+                            +33 6 15 20 20 35
+                        </a></li>
+                        <li class="mb-2"><a href="tel:002250788024985" class="text-link">
+                            <i class="ri-phone-fill align-middle"></i>
+                            +225 07 880 249 85
+                        </a></li>
+                        <li class="mb-2"><a href="mailto:contact@conseil-i-mmobilier.com" class="text-link">
+                            <i class="ri-mail-open-fill align-middle"></i>
+                            contact@conseil-i-mmobilier.com
+                        </a></li>
+                    </ul>
+                    <h4 class="fw-bold text-primary">Heures d'ouverture</h4>
+                    <table class="w-100 border-0">
+                        <tr>
+                            <td class="pb-2">Lundi - Vendredi</td>
+                            <td class="text-end">10:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td class="pb-2">Samedi</td>
+                            <td class="text-end">10:00 - 14:00</td>
+                        </tr>
+                        <tr>
+                            <td class="pb-2">Dimanche</td>
+                            <td class="text-end">Fermé</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End:: Carrousel -->
+
+<!-- Begin:: Breadcrumbs -->
+<section id="breadcrumbs" class="container d-flex gap-2 pt-3">
+    <a href="{{path('app_home')}}" class="text-link">Accueil</a>
+    <i class="ri-arrow-right-s-line align-middle"></i>
+    <span class="text-secondary">Contact</span>
+</section>
+<!-- End:: Breadcrumbs -->
+
+<!-- Begin:: Contact section -->
+{% include 'front/_contact.html.twig' with {'contactTitle': 'Écrivez-nous'} %}
+<!-- End:: Contact section -->
+
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript">
+    var map = L.map('map', {
+        center: [51.505, -0.09],
+        zoom: 13,
+        scrollWheelZoom: false
+    });
+    var popup = L.popup()
+    .setLatLng([51.513, -0.09])
+    .setContent("Nous somme ici.")
+    .openOn(map);
+
+</script>
+{% endblock %}
